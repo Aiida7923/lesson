@@ -1,3 +1,4 @@
+
 def math(*args)
   number = args
   sum = 0
