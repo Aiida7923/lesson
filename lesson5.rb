@@ -8,10 +8,10 @@ absolute = number.abs
 y = absolute/2
 result=0
 for i in 2..y
-if (absolute % i) == 0
-  result = 1
- break
-end
+  if (absolute % i) == 0
+    result = 1
+    break
+  end
 end
 
 if result == 0
