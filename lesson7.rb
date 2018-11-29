@@ -1,10 +1,10 @@
-def math
-  x = gets.to_i
-  y = gets.to_i
+def math(x,y)
   if  x > y
-    return "大きい数値は#{x}"
+    return "大きい数は#{x}"
   end
-    return "大きい数値は#{y}"
+    return "大きい数は#{y}"
 end
 
-puts math
+x = gets.to_i
+y = gets.to_i
+puts math(x,y)
