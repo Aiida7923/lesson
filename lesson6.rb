@@ -6,4 +6,6 @@ when 4,6,9,11
   puts "日数30"
 when 2
   puts "日数28,うるう年は29日"
+else
+  puts "指定した月は存在しません"
 end
