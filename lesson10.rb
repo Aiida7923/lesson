@@ -5,7 +5,7 @@ def game
   ai = rand(3)
   hand = ["✊","✌️","✋"]
   puts "あなたは#{hand[player]} 相手は#{hand[ai]} を出しました"
-    if player == ai
+  if player == ai
     puts "引き分け"
     return true
   elsif (player == 0 && ai == 1) || (player == 1 && ai == 2) || (player == 2 && ai == 0)
