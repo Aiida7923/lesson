@@ -37,6 +37,6 @@ end
 
 
 yusya = Yusya.new("勇者１")
-p yusya.greet
+yusya.greet
 slime = Slime.new("スライム")
-p slime.attack
+slime.attack
