@@ -6,7 +6,7 @@ class Yusya
   end
 
   def greet
-    "私は、#{@yusya_name}です"
+    puts "私は#{@yusya_name}です"
   end
 
   def defeat(monster)
