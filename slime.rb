@@ -5,7 +5,11 @@ class Slime < Monster
     super(monster_name,monster_exp)
   end
 
-  def attack
+  def m_name
+    @monster_name
+  end
+
+  def slime_attack
     puts "#{@monster_name}は体当たりをした"
   end
 end

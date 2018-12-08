@@ -14,11 +14,11 @@ class Yusya
     puts "私は#{@yusya_name}です"
   end
 
-  def attack(monster)
-    if monster != @monster_name
+  def yusya_attack(m_name)
+    if m_name.instance_of?(Slime)
       puts "モンスター以外は攻撃できません"
     else
-      puts "#{@yusya_name}は#{@monster_name}を攻撃した"
+      puts "#{@yusya_name}は#{m_name}を攻撃した"
     end
 
   end

@@ -5,4 +5,8 @@ class Monster
     @monster_name = monster_name
     @monster_exp = monster_exp
   end
+
+  def m_name
+    @monster_name
+  end
 end
