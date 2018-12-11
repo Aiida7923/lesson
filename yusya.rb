@@ -31,12 +31,13 @@ class Yusya
     if enemy.instance_of?(Slime)
       if @@total_exp >= @@level_up_exp
         @@yusya_level +=  1
-        @@level_up_exp *= 1.2
+        @@level_up_exp *= 1.5
         puts "#{@yusya_name}は#{@@yusya_level - 1}から#{@@yusya_level}にレベルがアップ！"
         puts @@total_exp
         puts @@level_up_exp
       else
-
+        puts @@total_exp
+        puts @@level_up_exp
       end
     end
   end
