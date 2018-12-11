@@ -2,6 +2,10 @@ require "./monster"
 require "./slime"
 
 class Yusya
+  @@total_exp = 0
+  @@yusya_level = 1
+  @@level_up_exp = 500
+
   attr_accessor :yusya_name,:yusya_exp,:yusya_level
 
   def initialize(yusya_name:,yusya_exp:,yusya_level:)
@@ -23,11 +27,17 @@ class Yusya
   end
 
   def get_exp(enemy)
-    total_exp = 0
+    @@total_exp += enemy.monster_exp
     if enemy.instance_of?(Slime)
-      puts total_exp += enemy.monster_exp
-    else
-      puts total_exp
+      if @@total_exp >= @@level_up_exp
+        @@yusya_level +=  1
+        @@level_up_exp *= 1.2
+        puts "#{@yusya_name}は#{@@yusya_level - 1}から#{@@yusya_level}にレベルがアップ！"
+        puts @@total_exp
+        puts @@level_up_exp
+      else
+
+      end
     end
   end
 end
