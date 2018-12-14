@@ -1,44 +1,33 @@
-require "./monster"
-require "./slime"
-
 class Yusya
-  @@total_exp = 0
-  @@yusya_level = 1
-  @@level_up_exp = 500
 
-  attr_accessor :yusya_name,:yusya_exp,:yusya_level
+  attr_reader :name,:exp,:level,:levelup_exp
 
-  def initialize(yusya_name:,yusya_exp:,yusya_level:)
-    @yusya_name = yusya_name
-    @yusya_exp = yusya_exp
-    @yusya_level = yusya_level
+  def initialize(name:)
+    @name = name
+    @exp = 0
+    @level = 1
+    @levelup_exp = 500
   end
 
   def greet
-    puts "私は#{@yusya_name}です"
+    puts "私は#{@name}です"
   end
 
-  def yusya_attack(enemy)
-    if enemy.instance_of?(Slime)
-      puts "#{@yusya_name}は#{enemy.monster_name}を倒し、経験値#{enemy.monster_exp}を獲得した！"
+  def attack(enemy)
+    if enemy.is_a?(Monster)
+      puts "#{@name}は#{enemy.name}を倒し、経験値#{enemy.exp}を獲得した！"
+      @exp += enemy.exp
+      if enemy.is_a?(Monster)
+        if @exp >= @levelup_exp
+          @level +=  1
+          @levelup_exp *= 1.5
+          puts "#{@name}は#{@level - 1}から#{@level}にレベルがアップ！"
+        else
+          puts "レベルアップまでに必要な経験値はあと#{(@levelup_exp - @exp).round}です"
+        end
+      end
     else
       puts "モンスター以外は攻撃できません"
-    end
-  end
-
-  def get_exp(enemy)
-    @@total_exp += enemy.monster_exp
-    if enemy.instance_of?(Slime)
-      if @@total_exp >= @@level_up_exp
-        @@yusya_level +=  1
-        @@level_up_exp *= 1.5
-        puts "#{@yusya_name}は#{@@yusya_level - 1}から#{@@yusya_level}にレベルがアップ！"
-        puts @@total_exp
-        puts @@level_up_exp
-      else
-        puts @@total_exp
-        puts @@level_up_exp
-      end
     end
   end
 end

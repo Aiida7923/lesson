@@ -2,26 +2,22 @@ require "./yusya"
 require "./monster"
 require "./slime"
 
-yusya1 = Yusya.new(yusya_name:"勇者",yusya_exp:0,yusya_level:1)
-slime1 = Slime.new(monster_name:"スライム",monster_exp:100)
-slime2 = Slime.new(monster_name:"メタルスライム",monster_exp:300)
-slime3 = Slime.new(monster_name:"弱いスライム",monster_exp:250)
-slime4 = Slime.new(monster_name:"強いスライム",monster_exp:150)
+yusya1 = Yusya.new(name:"勇者")
+slime1 = Slime.new(name:"スライム",exp:100)
+slime2 = Slime.new(name:"メタルスライム",exp:300)
+slime3 = Slime.new(name:"弱いスライム",exp:250)
+slime4 = Slime.new(name:"強いスライム",exp:50)
 
 yusya1.greet
-slime1.slime_attack
-yusya1.yusya_attack(slime1)
-yusya1.get_exp(slime1)
-yusya1.yusya_attack(slime2)
-yusya1.get_exp(slime2)
-yusya1.yusya_attack(slime3)
-yusya1.get_exp(slime3)
-yusya1.yusya_attack(slime4)
-yusya1.get_exp(slime4)
+slime1.attack
+yusya1.attack(slime1)
+yusya1.attack(slime2)
+yusya1.attack(slime3)
+yusya1.attack(slime4)
 
 # ここから下が追加ストーリー（正しくない振る舞いをする）
 
-yusya2 = Yusya.new(yusya_name:"勇者2",yusya_exp:0,yusya_level:1)
-slime5 = Slime.new(monster_name:"非常に弱いスライム",monster_exp:10)
-yusya1.yusya_attack(slime5)
-yusya1.get_exp(slime5)
+yusya2 = Yusya.new(name:"勇者2")
+slime5 = Slime.new(name:"非常に弱いスライム",exp:10)
+yusya2.greet
+yusya2.attack(slime5)
