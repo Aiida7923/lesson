@@ -17,14 +17,12 @@ class Yusya
     if enemy.is_a?(Monster)
       puts "#{@name}は#{enemy.name}を倒し、経験値#{enemy.exp}を獲得した！"
       @exp += enemy.exp
-      if enemy.is_a?(Monster)
-        if @exp >= @levelup_exp
-          @level +=  1
-          @levelup_exp *= 1.5
-          puts "#{@name}は#{@level - 1}から#{@level}にレベルがアップ！"
-        else
-          puts "レベルアップまでに必要な経験値はあと#{(@levelup_exp - @exp).round}です"
-        end
+      if @exp >= @levelup_exp
+        @level +=  1
+        @levelup_exp *= 1.5
+        puts "#{@name}は#{@level - 1}から#{@level}にレベルがアップ！"
+      else
+        puts "レベルアップまでに必要な経験値はあと#{(@levelup_exp - @exp).round}です"
       end
     else
       puts "モンスター以外は攻撃できません"
