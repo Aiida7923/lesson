@@ -8,6 +8,7 @@ class Car
   def initialize(number:)
     @number = number
     @@count += 1
+    @id += 1
   end
 
   def self.total
