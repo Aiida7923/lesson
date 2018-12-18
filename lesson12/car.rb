@@ -1,15 +1,16 @@
 class Car
 
-  @@id = 0
+  @@count = 0
+  @id = 0
 
-  attr_reader :number,:id
+  attr_reader :number
 
   def initialize(number:)
     @number = number
-    @@id += 1
+    @@count += 1
   end
 
-  def total
-    puts "#{@@id}"
+  def self.total
+    puts "\n車の総数は#{@@count}台です"
   end
 end

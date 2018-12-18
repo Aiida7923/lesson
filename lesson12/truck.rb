@@ -1,17 +1,18 @@
 class Truck < Car
 
-  attr_reader :max_weight,:have_weight,:color
+  @@max_weight = 1000
 
-  def initialize(number:,max_weight:,have_weight:,color:)
+  attr_reader :have_weight,:color
+
+  def initialize(number:,have_weight:,color:)
     @number = number
-    @max_weight = max_weight
     @have_weight = have_weight
     @color = color
-    @@id += 1
+    @@count += 1
   end
 
   def charge(weight)
-    if (@max_weight - @have_weight) >= weight
+    if (@@max_weight - @have_weight) >= weight
       puts "荷物を積みます"
       @have_weight += weight
     else
@@ -20,6 +21,6 @@ class Truck < Car
   end
 
   def info
-    puts "ID : #{@@id}\nナンバー : #{@number}\n積載可能量 : #{@max_weight}\n積載量 : #{@have_weight}\n"
+    puts "\nID : #{@id}\nナンバー : #{@number}\n積載可能量 : #{@@max_weight}\n積載量 : #{@have_weight}\n"
   end
 end
