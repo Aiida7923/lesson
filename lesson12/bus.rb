@@ -4,10 +4,11 @@ class Bus < Car
 
   attr_reader :passenger
 
-  def initialize(number:,passenger:)
+  def initialize(number:,passenger:,id:"#{@@count}")
     @number = number
     @passenger = passenger
     @@count += 1
+    @id = id
   end
 
   def info
