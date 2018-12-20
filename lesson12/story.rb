@@ -11,7 +11,7 @@ bus1.info
 bus2.info
 bus3.info
 
-Car.total
-
 truck1.charge(200)
 truck1.charge(900)
+
+Car.total
