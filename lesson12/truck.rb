@@ -4,12 +4,12 @@ class Truck < Car
 
   attr_reader :have_weight,:color
 
-  def initialize(number:,have_weight:,color:,id:"#{@@count}")
+  def initialize(number:,have_weight:,color:)
     @number = number
     @have_weight = have_weight
     @color = color
     @@count += 1
-    @id = id
+    @id = @@count
   end
 
   def charge(weight)
