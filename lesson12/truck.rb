@@ -14,14 +14,16 @@ class Truck < Car
 
   def charge(weight)
     if (@@max_weight - @have_weight) >= weight
-      puts "荷物を積みます"
+      puts "\n#{weight}kgの荷物は積めます"
       @have_weight += weight
+      puts "現在の積載量は#{@have_weight}kgです"
     else
-      puts "荷物は積めません"
+      over = (@have_weight + weight.to_i) - @@max_weight
+      puts "\n#{weight}kgの荷物は#{over}kg超過のため積めません"
     end
   end
 
   def info
-    puts "\nID : #{@id}\nナンバー : #{@number}\n積載可能量 : #{@@max_weight}\n積載量 : #{@have_weight}\n"
+    puts "\nID : #{@id}\nナンバー : #{@number}\n積載可能量 : #{@@max_weight}kg\n積載量 : #{@have_weight}kg\n"
   end
 end
