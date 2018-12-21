@@ -1,6 +1,6 @@
 class Bus < Car
 
-  @@max_passenger = 40
+  Max_passenger = 40
 
   attr_reader :passenger
 
@@ -13,6 +13,6 @@ class Bus < Car
 
   def info
     super
-    puts "乗車可能人数 : #{@@max_passenger}\n乗車人数 : #{@passenger}\n"
+    puts "乗車可能人数 : #{Max_passenger}\n乗車人数 : #{@passenger}\n"
   end
 end

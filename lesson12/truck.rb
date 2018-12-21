@@ -1,6 +1,6 @@
 class Truck < Car
 
-  @@max_weight = 1000
+  Max_weight = 1000
 
   attr_reader :have_weight,:color
 
@@ -13,7 +13,7 @@ class Truck < Car
   end
 
   def charge(weight_kg)
-    over = (@have_weight + weight_kg.to_i) - @@max_weight
+    over = (@have_weight + weight_kg.to_i) - Max_weight
     if over <= 0
       puts "\n#{weight_kg}kgの荷物は積めます"
       @have_weight += weight_kg
@@ -25,6 +25,6 @@ class Truck < Car
 
   def info
     super
-    puts "積載可能量 : #{@@max_weight}kg\n積載量 : #{@have_weight}kg\n"
+    puts "積載可能量 : #{Max_weight}kg\n積載量 : #{@have_weight}kg\n"
   end
 end
