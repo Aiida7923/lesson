@@ -6,20 +6,20 @@ class Truck < Car
 
   def initialize(number:,have_weight:,color:)
     @number = number
-    @have_weight = have_weight
-    @color = color
     @@count += 1
     @id = @@count
+    @have_weight = have_weight
+    @color = color
   end
 
-  def charge(weight)
-    if (@@max_weight - @have_weight) >= weight
-      puts "\n#{weight}kgの荷物は積めます"
-      @have_weight += weight
+  def charge(weight_kg)
+    if (@@max_weight - @have_weight) >= weight_kg
+      puts "\n#{weight_kg}kgの荷物は積めます"
+      @have_weight += weight_kg
       puts "現在の積載量は#{@have_weight}kgです"
     else
-      over = (@have_weight + weight.to_i) - @@max_weight
-      puts "\n#{weight}kgの荷物は#{over}kg超過のため積めません"
+      over = (@have_weight + weight_kg.to_i) - @@max_weight
+      puts "\n#{weight_kg}kgの荷物は#{over}kg超過のため積めません"
     end
   end
 
