@@ -6,8 +6,6 @@ class Truck < Car
 
   def initialize(number,have_weight,color)
     super(number)
-    @@count += 1
-    @id = @@count
     @have_weight = have_weight
     @color = color
   end

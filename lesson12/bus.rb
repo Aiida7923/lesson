@@ -6,8 +6,6 @@ class Bus < Car
 
   def initialize(number,passenger)
     super(number)
-    @@count += 1
-    @id = @@count
     @passenger = passenger
   end
 

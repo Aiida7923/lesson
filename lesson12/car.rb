@@ -6,6 +6,7 @@ class Car
 
   def initialize(number)
     @number = number
+    @@count += 1
     @id = @@count
 
   end
