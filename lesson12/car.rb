@@ -4,11 +4,14 @@ class Car
 
   attr_reader :number
 
-  def initialize(number:)
+  def initialize(number)
     @number = number
-    @@count += 1
     @id = @@count
 
+  end
+
+  def info
+    puts "\nID : #{@id}\nナンバー : #{@number}"
   end
 
   def self.total
