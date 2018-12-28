@@ -11,18 +11,8 @@ class Figure
     @height = height
   end
 
-  def change_colore(a)
-    @colore,a.colore = a.colore,@colore
+  def change_colore(figure)
+    @colore,figure.colore = figure.colore,@colore
     puts
-  end
-
-
-  def self.area(figure)
-    area = figure.bottom_length * figure.height
-    if figure.instance_of?(Triangle)
-      puts "面積は#{area/2}です。"
-    else
-      puts "面積は#{area}です。"
-    end
   end
 end
