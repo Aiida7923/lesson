@@ -4,6 +4,7 @@ class Square < Quadrilateral
 
   def initialize(colore,side_length)
     super(colore,side_length,side_length)
+    @side_length = side_length
   end
 
   def area
