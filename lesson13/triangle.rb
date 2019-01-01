@@ -1,7 +1,7 @@
 class Triangle < Figure
 
-  def initialize(colore,bottom_length,height)
-    super(colore)
+  def initialize(color,bottom_length,height)
+    super(color)
     @bottom_length = bottom_length
     @height = height
   end

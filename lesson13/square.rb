@@ -1,10 +1,10 @@
 class Square < Quadrilateral
 
-  def initialize(colore,height)
-    super(colore,height,height)
+  def initialize(color,height)
+    super(color,height,height)
   end
 
   def info
-    puts "色:#{@colore} 一辺:#{@height}"
+    puts "色:#{@color} 一辺:#{@height}"
   end
 end

@@ -14,7 +14,7 @@ square1.area
 triangle1.info
 quadrilateral1.info
 square1.info
-square1.change_colore(triangle1)
+square1.change_color(triangle1)
 
-puts square1.colore
-puts triangle1.colore
+puts square1.color
+puts triangle1.color

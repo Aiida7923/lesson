@@ -1,7 +1,7 @@
 class Quadrilateral < Figure
 
-  def initialize(colore,bottom_length,height)
-    super(colore)
+  def initialize(color,bottom_length,height)
+    super(color)
     @bottom_length = bottom_length
     @height = height
   end
@@ -12,6 +12,6 @@ class Quadrilateral < Figure
   end
 
   def info
-    puts "色:#{@colore} 底辺:#{@bottom_length} 高さ:#{@height}"
+    puts "色:#{@color} 底辺:#{@bottom_length} 高さ:#{@height}"
   end
 end

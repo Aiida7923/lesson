@@ -1,18 +1,18 @@
 class Figure
 
-  attr_accessor :colore
+  attr_accessor :color
 
-  protected  :colore=
+  protected  :color=
 
   def initialize(color)
-    @colore = color
+    @color = color
   end
 
-  def change_colore(figure)
-    @colore,figure.colore = figure.colore,@colore
+  def change_color(figure)
+    @color,figure.color = figure.color,@color
   end
 
   def info
-    puts "色:#{@colore}"
+    puts "色:#{@color}"
   end
 end
